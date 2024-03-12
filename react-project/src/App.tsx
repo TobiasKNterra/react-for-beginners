@@ -1,4 +1,6 @@
 import "./App.css";
+import "./styles/Colors.css";
+
 import reactSVG from "./assets/react.svg";
 
 function App() {
