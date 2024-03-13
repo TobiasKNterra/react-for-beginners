@@ -7,7 +7,7 @@ export default function getAFulfilledPromise(): Promise<string> {
 }
 
 export function getARejectedPromise(): Promise<string> {
-  return new Promise((reject) => {
+  return new Promise((resolve, reject) => {
     setTimeout(() => {
       reject("Promise rejected!");
     }, 3000);
