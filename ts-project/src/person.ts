@@ -1,11 +1,11 @@
-export interface Person3 {
+export interface Person {
   name: string;
   nr: number;
   pets?: string[];
   isNterrianer(): boolean;
 }
 
-export default function printPets3(person: Person3): void {
+export default function printPets3(person: Person): void {
   const prefix: string = person.isNterrianer() ? "Nterra - " : "";
 
   if (person.pets) {
