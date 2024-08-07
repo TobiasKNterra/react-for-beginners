@@ -1,6 +1,6 @@
 import BlogPostModel from "../models/BlogPostModel";
 
-export const testBlogPost: BlogPostModel = {
+export const singleBlogPost: BlogPostModel = {
   id: "1",
   title: "Traveling the World",
   content:
@@ -9,7 +9,7 @@ export const testBlogPost: BlogPostModel = {
   date: "14.03.2024, 12:00",
 };
 
-export const testBlogPosts: BlogPostModel[] = [
+export const multipleBlogPosts: BlogPostModel[] = [
   {
     id: "1",
     title: "Nterra",
