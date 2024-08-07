@@ -6,43 +6,7 @@ services:
   backend:
     image: backend
     build:
-      context: ./backend
+      context: ./react-reactor
       dockerfile: dockerfile
     ports:
-      - "3333:3333"
-    depends_on:
-      - mongodb
-    environment:
-      MONGO_URL: mongodb://mongodb:27017/blog
-    links:
-      - mongodb
-  
-  # Database - Mongo DB
-  mongodb:
-    image: mongo
-    ports:
-      - "27017:27017"
-
-  mongo_seed:
-    image: mongo
-    links:
-      - mongodb
-    volumes:
-      - ./mongo-seed:/mongo-seed
-    command:
-      /mongo-seed/mongo-seed.sh
-
-  # Database Manager
-  mongo-express:
-    image: mongo-express
-    ports:
-      - 8099:8081
-    depends_on:
-      - mongodb
-    environment:
-      ME_CONFIG_BASICAUTH_USERNAME: express
-      ME_CONFIG_BASICAUTH_PASSWORD: 123456
-      ME_CONFIG_MONGODB_PORT: 27017
-      ME_CONFIG_MONGODB_SERVER: mongodb
-    links:
-      - mongodb
+      - "3333:8088"
