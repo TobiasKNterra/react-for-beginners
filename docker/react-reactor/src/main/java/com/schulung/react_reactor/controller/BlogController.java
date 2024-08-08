@@ -20,7 +20,7 @@ import java.sql.Array;
 import java.util.ArrayList;
 import java.util.List;
 
-
+@CrossOrigin
 @RestController()
 @RequestMapping("/posts")
 @AllArgsConstructor
