@@ -10,7 +10,7 @@ export default function OverviewPage () {
 
 
   useEffect(() => {
-    fetch("http://localhost:8088/posts")
+    fetch("http://localhost:3333/posts")
       .then(response => response.json())
       .then(data =>  setBlogPosts(data))
   },[])

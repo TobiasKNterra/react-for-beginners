@@ -13,7 +13,7 @@ export default function DetailsPage()
 
 
   useEffect(() => {
-    fetch("http://localhost:8088/posts/"+id)
+    fetch("http://localhost:3333/posts/"+id)
     .then(response => response.json())
     .then(data =>  setBlogPost(data))
   },[])
